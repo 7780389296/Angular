@@ -1,0 +1,36 @@
+
+<table class= "table table-bordered" >
+    <thead>
+    <tr>
+        <th>ProductName</th>
+        <th>Price</th>
+        <th>Color</th>
+        <th>Dimensions</th>
+        <th>Specification</th>
+        <th>Manufacturer</th>
+        <th>Quantity</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let p of allProducts">
+        <td>{{p.productName}}</td>
+        <td>{{p.price}}</td>
+        <td>{{p.color}}</td>
+        <td>{{p.dimensions}}</td>
+        <td>{{p.specification}}</td>
+        <td>{{p.manufacturer}}</td>
+        <td>{{p.quantity}}</td>
+        
+       <td>  <a routerLink="../deleteproduct"  class="btn btn-danger">Delete</a></td>
+
+
+
+    </tr>
+     
+</tbody>
+<tr class="md-5">
+    <td></td>
+    <td></td><td></td><td></td><td></td><td></td><td> <a routerLink="../updateproduct"  class="btn btn-info">Update</a></td>
+    <a routerLink="../addproduct"  class="btn btn-success">ADD</a>
+</tr>
+</table>

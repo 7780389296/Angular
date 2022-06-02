@@ -1,0 +1,28 @@
+<table  class="table" >
+    <thead>
+    <tr>
+        <th>ProductName</th>
+        <th>Price</th>
+        <th>Color</th>
+        <th>Dimensions</th>
+        <th>Specification</th>
+        <th>Manufacturer</th>
+        <th>Quantity</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let p of allProducts">
+        <td>{{p.productName}}</td>
+        <td>{{p.price}}</td>
+        <td>{{p.color}}</td>
+        <td>{{p.dimensions}}</td>
+        <td>{{p.specification}}</td>
+        <td>{{p.manufacturer}}</td>
+        <td>{{p.quantity}}</td>
+        <td><a class="btn btn-primary">BUY</a></td>
+        <td><a class="btn btn-primary" routerLink="">ADD TO CART</a></td>
+
+    </tr>
+</tbody>
+
+</table>

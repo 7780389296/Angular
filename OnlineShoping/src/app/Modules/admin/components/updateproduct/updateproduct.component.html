@@ -1,0 +1,50 @@
+
+<label for="">ID</label>
+<input #inp1>
+<button (click)="edit(inp1.value)">Edit</button>
+<br>
+
+<form action="" [formGroup]="productForm">
+
+  <div class="form-group row justify-content-center mt-4">
+    <label for="inputPassword" class="col-sm-2 col-form-label">Product Name</label>
+    <div class="col-4">
+      <input type="text" class="form-control" id="inputPassword" placeholder="Product Name" value="{{products.productName}}" formControlName="productName">
+    </div>
+
+
+    <label for="inputPassword" class="col-sm-2 col-form-label mt-2">Price</label>
+    <div class="col-4">
+      <input type="text" class="form-control " id="inputPassword"  value="{{products.price}}" placeholder="Price" formControlName="price">
+    </div>
+    <label for="inputPassword" class="col-sm-2 col-form-label mt-2">Color</label>
+    <div class="col-4">
+      <input type="text" class="form-control" id="inputPassword" value="{{products.color}}" placeholder="color" formControlName="color">
+    </div>
+    <label for="inputPassword" class="col-sm-2 col-form-label ">Specification</label>
+    <div class="col-4">
+      <input type="text" class="form-control" id="inputPassword" value="{{products.specification}}" placeholder="specification" formControlName="specification">
+    </div>
+    <label for="inputPassword" class="col-sm-2 col-form-label mt-2">Dimension</label>
+    <div class="col-4">
+      <input type="text" class="form-control" id="inputPassword" value="{{products.dimensions}}" placeholder="Dimension" formControlName="dimensions">
+    </div>
+    <label for="inputPassword" class="col-sm-2 col-form-label">Manufacturer</label>
+    <div class="col-4">
+      <input type="text" class="form-control" id="inputPassword" value="{{products.manufacturer}}" placeholder="Manufacturer" formControlName="manufacturer">
+    </div>
+    <label for="inputPassword" class="col-sm-2 col-form-label">Quantity</label>
+    <div class="col-4">
+      <input type="text" class="form-control" id="inputPassword" value="{{products.quantity}}" placeholder="quantity" formControlName="quantity">
+    </div>
+    <label for="inputPassword" class="col-sm-2 col-form-label">Category Id</label>
+    <div class="col-4">
+      <input type="text" class="form-control" id="inputPassword"  value="{{products.categoryId}}" placeholder="category Id" formControlName="categoryId">
+    </div>
+    <div class="row col-6 mt-5">
+        <div class="col">
+        <button class="btn btn-warning" (click)="updateProduct()">Update</button>
+      </div>
+  </div>
+    </div>
+</form>

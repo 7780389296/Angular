@@ -1,0 +1,24 @@
+
+<div class="row justify-content-center">
+    <div class="col-auto">
+
+<table>
+    <tr>
+        <th>CategoryName</th>
+
+    </tr >
+    <tr  *ngFor="let c of allCategories">
+       
+        <td>{{c.categoryName}}</td>
+
+    </tr>
+
+    <tr class="md-5">
+        <td></td>
+        
+        <a routerLink="../addcategory"  class="btn btn-success">ADD</a>
+    </tr>
+
+</table>
+</div>
+</div>
