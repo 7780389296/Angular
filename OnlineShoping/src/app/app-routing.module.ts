@@ -4,6 +4,7 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
 import { LoginComponent } from './components/login/login.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { RegisterComponent } from './components/register/register.component';
+import { AuthGuard } from './guards/auth.guard';
 
 
 const routes: Routes = [
@@ -13,7 +14,7 @@ const routes: Routes = [
   {path:'', redirectTo:'login',pathMatch:'full'},
   {
     path: 'admin',
-   
+   canActivate:[AuthGuard],
     loadChildren: () =>
       import('./Modules/admin/admin.module').then((m) => m.AdminModule),
   },
